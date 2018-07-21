@@ -1,0 +1,52 @@
+body {
+    background-color: whitesmoke;
+}
+
+.jumbotron-fluid {
+    font-size: 68px;
+    text-align: center;
+    padding: 3%;
+    background-color: #00008B;
+    color: white;
+    margin: 3%;
+}
+
+.schedTable {
+    margin: 3%;
+    width: 94%;
+}
+
+#tableHead {
+    text-align: center;
+}
+
+#tableBody {
+    text-align: center;
+}
+
+.card {
+    margin: 3%;
+    border: 1px solid orange;
+}
+
+.card-header {
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.trainCard {
+    margin: 3%;
+    border: 1px solid orange;
+}
+
+.trainCardBody {
+    padding: 3%;
+    background-color: white;
+    font-weight: bold;
+}
+
+.tLabels {
+    width: 100%;
+}

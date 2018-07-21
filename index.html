@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+    <!-- Links Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Links Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Links CSS Reset -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="jumbotron-fluid">
+        Train Scheduler
+    </div>
+
+    <div class="card">
+        <div class="card-header">Current Train Schedule</div>
+        <table class="table schedTable">
+            <thead id="tableHead">
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>Name</td>
+                    <td>Destination</td>
+                    <td>25</td>
+                    <td>05:35pm</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="trainCard">
+        <div class="card-header">Add Train</div>
+        <div class="trainCardBody">
+            <label for="tName">Train Name</label>
+            <input type="text" class="tLabels" id="tName">
+            <br><br>
+            <label for="tDest">Destination</label>
+            <input type="text" class="tLabels" id="tDest">
+            <br><br>
+            <label for="tFirst">First Train Time (HH:mm - military time)</label>
+            <input type="text" class="tLabels" id="tFirst">
+            <br><br>
+            <label for="tFreq">Frequency</label>
+            <input type="text" class="tLabels" id="tFreq">
+            <br><br>
+            <button type="button">Submit</button>
+        </div>
+    </div>
+
+    <!-- Links jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Links Javascript -->
+    <script type="text/javascript" src="./assets/javascript/javascript.js"></script>
+</body>
+
+</html>
