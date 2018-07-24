@@ -5,7 +5,7 @@ var config = {
     projectId: "train-scheduler-71295",
     storageBucket: "",
     messagingSenderId: "741669256476"
-  };
+};
 
 firebase.initializeApp(config);
 
@@ -46,30 +46,45 @@ $("#addTrainButton").on("click", function (event) {
     $("#tFreq").val("");
 });
 
-// Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
-database.ref().on("child_added", function(childSnapshot) {
+// Create Firebase event for adding train to the database and a row in the html when a user adds an entry
+database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
-  
+
     // Store everything into a variable.
     var trainName = childSnapshot.val().name;
     var trainDest = childSnapshot.val().dest;
     var trainFirst = childSnapshot.val().first;
     var trainFreq = childSnapshot.val().freq;
-  
+
+    // Format next arrival time
+    var formattedArrival = moment(trainFirst).format("HH:mm");
+
     // Train Info
     console.log(trainName);
     console.log(trainDest);
     console.log(trainFirst);
+    console.log(formattedArrival);
     console.log(trainFreq);
 
-    // Create the new row
-  var newRow = $("<tr>").append(
-    $("<td>").text(trainName),
-    $("<td>").text(trainDest),
-    $("<td>").text(trainFirst),
-    $("<td>").text(trainFreq),
-  );
+    // Calculation Variables
+    var currentTime = moment();
+    var nextArrival = moment();
+    var minutesAway = moment();
 
-  // Append the new row to the table
-  $(".schedTable > tbody").append(newRow);
+    // Calculate the next arrival time
+
+    // Calculate the # of minutes away
+        
+
+    // Create the new row
+    var newRow = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(trainDest),
+        $("<td>").text(trainFreq),
+        $("<td>").text(nextArrival),
+        $("<td>").text(minutesAway),
+    );
+
+    // Append the new row to the table
+    $(".schedTable > tbody").append(newRow);
 });
